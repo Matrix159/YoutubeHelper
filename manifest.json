@@ -9,6 +9,21 @@
   "page_action": {
     "default_popup": "popup.html"
   },
+  "content_scripts": [
+    {
+        "matches": [
+            "http://*/*",
+            "https://*/*"
+        ],
+        "css": [
+            "imageMarker.css"
+        ],
+        "js": [
+            "imageMarker.js"
+        ]
+    }
+],
+  "options_page": "options.html",
   "permissions":  ["activeTab", "declarativeContent", "storage"],
   "manifest_version": 2
 }
